@@ -1,0 +1,10 @@
+^C:\USERS\DANIK\OOP_MISIS_WORKS_2022\GORBUSHINDA\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/danik/oop_misis_works_2022/GorbushinDA -BC:/Users/danik/oop_misis_works_2022/GorbushinDA/bin --check-stamp-file C:/Users/danik/oop_misis_works_2022/GorbushinDA/bin/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
