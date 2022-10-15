@@ -1,3 +1,0 @@
-C:/Cpp_projects/oop_misis_works_2022/Boldyrev/rational/bin/CMakeFiles/main.dir
-C:/Cpp_projects/oop_misis_works_2022/Boldyrev/rational/bin/CMakeFiles/ALL_BUILD.dir
-C:/Cpp_projects/oop_misis_works_2022/Boldyrev/rational/bin/CMakeFiles/ZERO_CHECK.dir
