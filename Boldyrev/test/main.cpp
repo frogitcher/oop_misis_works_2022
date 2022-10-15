@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include "header.h"
-#include "doctest.h"
+#include "../../doctest.h"
 
 TEST_CASE("testing") {
     CHECK(HelloWorld() == "Hello, world!");
