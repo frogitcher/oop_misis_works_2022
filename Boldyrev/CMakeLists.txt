@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(hello_world)
+project(lab_directory)
 
 add_subdirectory(rational)
 add_subdirectory(test)

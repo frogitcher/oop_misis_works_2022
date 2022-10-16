@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(hello_world)
+project(rational)
 
 add_executable(rational_main
 	Main.cpp
