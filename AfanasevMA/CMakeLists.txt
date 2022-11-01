@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.23)
+project(afanasev)
+
+set(CMAKE_CXX_STANDARD 17)
+
+add_executable(lab1_task1 lab1/task1.cpp lab1/rational.h lab1/rational.cpp)
+add_executable(lab1_task2 lab1/task2.cpp lab1/rational.h lab1/rational.cpp)
+add_executable(lab1_task3 lab1/task3.cpp lab1/rational.h lab1/rational.cpp)
+add_executable(lab1_task4 lab1/task4.cpp lab1/rational.h lab1/rational.cpp)
+add_executable(lab1_task5 lab1/task5.cpp lab1/rational.h lab1/rational.cpp)
+add_executable(lab1_task6 lab1/task6.cpp lab1/rational.h lab1/rational.cpp)
+add_executable(lab1_task7 lab1/task7.cpp lab1/rational.h lab1/rational.cpp)
+add_executable(lab1_task8 lab1/task8.cpp lab1/rational.h lab1/rational.cpp)
+add_executable(lab1_task9 lab1/task9.cpp lab1/rational.h lab1/rational.cpp)
+add_executable(lab1_task10 lab1/task10.cpp lab1/rational.h lab1/rational.cpp)
+add_executable(lab1_task11 lab1/task11.cpp lab1/rational.h lab1/rational.cpp)
