@@ -1,0 +1,42 @@
+#include <iostream>
+#include <vector>
+#include<set>
+#include<string>
+#include<algorithm>
+struct st {
+	int r;
+	int i;
+};
+bool cmp(st x, st y) {
+	if (x.r > y.r) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+int main() {
+	long long n, A, B;
+	std::cin >> n >> A >> B;
+	std::vector <st> S(n-1);
+	long long s=0;
+	long long po;
+	std::cin >> po;
+	for (long long i = 0; i < n-1; ++i) {
+		std::cin >> S[i].r;
+		S[i].i = i+1;
+		s += S[i].r;
+	}
+	s += po;
+	long long w = po * A,as,ans=0;
+	as = s;
+	sort(S.begin(), S.end(),cmp);
+	long long i = 0;
+	while (w < as * B) {
+		ans += 1;
+		as -= S[i].r;
+		++i;
+	}
+	std::cout << ans;
+}
+/* Fri Nov 11 2022 21:29:54 GMT+0300 (Moscow Standard Time) */
