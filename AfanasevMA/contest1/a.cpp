@@ -1,25 +1,18 @@
-//
-// Created by Максим Афанасьев on 30.10.2022.
-//
-
 #include <iostream>
+#include <vector>
 
 
 int main() {
     long int n = 0;
     std::cin >> n;
-    long int nums[n];
-    long int min_power = INT32_MAX;
-    long int max_power = 0;
+    std::vector<long int> nums;
     for (int i = 0; i < n; ++i) {
-        std::cin >> nums[i];
-        if (nums[i] < min_power) {
-            min_power = nums[i];
-        }
-        if (nums[i] > max_power) {
-            max_power = nums[i];
-        }
+        long int num;
+        std::cin >> num;
+        nums.push_back(num);
     }
+    long int min_power = *std::min_element(nums.begin(), nums.end());
+    long int max_power = *std::max_element(nums.begin(), nums.end());
     int cnt = 0;
     for (int i = 0; i < n; ++i) {
         if (nums[i] > min_power && nums[i] < max_power) {
