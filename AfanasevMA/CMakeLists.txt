@@ -1,4 +1,8 @@
 cmake_minimum_required(VERSION 3.23)
+
+set(CMAKE_C_COMPILER "gcc")
+set(CMAKE_CXX_COMPILER "g++")
+
 project(afanasev)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -23,3 +27,17 @@ add_executable(contest1_e contest1/e.cpp)
 add_executable(contest1_f contest1/f.cpp)
 add_executable(contest1_g contest1/g.cpp)
 add_executable(contest1_h contest1/h.cpp)
+
+
+add_executable(contest2_a contest2/a.cpp)
+add_executable(contest2_b contest2/b.cpp)
+add_executable(contest2_c contest2/c.cpp)
+add_executable(contest2_d contest2/d.cpp)
+add_executable(contest2_e contest2/e.cpp)
+add_executable(contest2_f contest2/f.cpp)
+add_executable(contest2_g contest2/g.cpp)
+
+
+add_executable(contest3_a contest3/a.cpp)
+add_executable(contest3_b contest3/b.cpp)
+add_executable(contest3_c contest3/c.cpp)
