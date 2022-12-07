@@ -1,7 +1,3 @@
-//
-// Created by Максим Афанасьев on 30.10.2022.
-//
-
 #include <iostream>
 #include <iterator>
 #include <array>
@@ -16,7 +12,7 @@ int main() {
         char ch = str[i];
         if (ch == 'L') {
             for (int ii = 0; ii < 10; ii++) {
-                if (not state[ii]) {
+                if (!state[ii]) {
                     state[ii] = true;
                     break;
                 }
@@ -24,7 +20,7 @@ int main() {
         }
         else if (ch == 'R') {
             for (int ii = 9; ii >= 0; ii--) {
-                if (not state[ii]) {
+                if (!state[ii]) {
                     state[ii] = true;
                     break;
                 }

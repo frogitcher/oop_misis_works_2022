@@ -1,7 +1,3 @@
-//
-// Created by Максим Афанасьев on 30.10.2022.
-//
-
 #include <iostream>
 #include <iterator>
 #include <algorithm>
@@ -19,25 +15,10 @@ int main() {
     int q = 0;
     for (int i = 0; i < l; i++) {
         char ch = genome[i];
-        switch (ch) {
-            case 'A':
-                a++;
-                break;
-            case 'C':
-                c++;
-                break;
-            case 'G':
-                g++;
-                break;
-            case 'T':
-                t++;
-                break;
-            case '?':
-                q++;
-                break;
-            default:
-                break;
-        }
+        a += (ch == 'A');
+        c += (ch == 'C');
+        g += (ch == 'G');
+        q += (ch == '?');
     }
     int max_acgt = std::max({a, c, g, t});
     int needs_a = max_acgt - a;
@@ -84,4 +65,3 @@ int main() {
         std::cout << "===";
     }
 }
-/* Sun Oct 30 2022 21:38:05 GMT+0300 (Moscow Standard Time) */

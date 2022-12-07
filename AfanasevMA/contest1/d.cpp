@@ -1,14 +1,7 @@
-//
-// Created by Максим Афанасьев on 30.10.2022.
-//
-
 #include <iostream>
 #include <map>
-#include <iterator>
 #include <vector>
-#include <set>
 #include <array>
-#include <algorithm>
 
 
 int main() {
@@ -30,11 +23,10 @@ int main() {
         if (i != -1) {
             sum -= holes[i];
         }
-        double spills = (double)start * a / (double)sum;
+        double spills = double(start) * a / double(sum);
         if (spills >= b) {
             std::cout << i + 1;
             return 0;
         }
     }
-
 }

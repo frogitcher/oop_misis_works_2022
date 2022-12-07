@@ -1,14 +1,4 @@
-//
-// Created by Максим Афанасьев on 30.10.2022.
-//
-
 #include <iostream>
-#include <map>
-#include <iterator>
-#include <vector>
-#include <set>
-#include <array>
-#include <algorithm>
 
 
 int main() {
