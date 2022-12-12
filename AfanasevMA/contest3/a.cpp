@@ -2,12 +2,12 @@
 #include <cmath>
 #include <fstream>
 
-double CalculatePi(int n) {
+double CalculatePi(long int n) {
     // see https://en.wikipedia.org/wiki/Leibniz_formula_for_%CF%80
     double res = 0;
-    int den = 1;
+    long int den = 1;
     double num = 1.0;
-    for (int i = 0; i < n; i++) {
+    for (long int i = 0; i < n; i++) {
         res += num / den;
         num *= -1;
         den += 2;
@@ -15,12 +15,12 @@ double CalculatePi(int n) {
     return 4 * res;
 }
 
-double CalculateAtan(int n, double x) {
+double CalculateAtan(long int n, double x) {
     // see https://en.wikipedia.org/wiki/Taylor_series#Trigonometric_functions
     double res = 0;
     double num = x;
-    int den = 1;
-    for (int i = 0; i < n; i++) {
+    long int den = 1;
+    for (long int i = 0; i < n; i++) {
         double to_add = num / den;
         if (i % 2 == 1) {
             to_add *= -1;
@@ -32,7 +32,7 @@ double CalculateAtan(int n, double x) {
     return res;
 }
 
-double CalculateAtan2(int n, double pi, double y, double x) {
+double CalculateAtan2(long int n, double pi, double y, double x) {
     if (x == 0) {
         return pi / 2;
     }
