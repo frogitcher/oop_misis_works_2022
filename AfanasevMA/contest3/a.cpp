@@ -38,7 +38,6 @@ double CalculateAtan2(int n, double pi, double y, double x) {
     }
     else {
         double yx = y / x;
-        // pi / 2 = atan(1/x) + atan(x)
         if (std::abs(yx) > 1) {
             return pi / 2 - CalculateAtan(n, 1 / yx);
         }
