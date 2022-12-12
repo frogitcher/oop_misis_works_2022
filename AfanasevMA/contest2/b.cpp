@@ -4,7 +4,7 @@
 #include <map>
 #include <stdexcept>
 
-void process_batch() {
+void ProcessBatch() {
     int n_words_per_player;
     std::cin >> n_words_per_player;
     std::vector<std::vector<std::string>> player_words;
@@ -45,6 +45,6 @@ int main() {
     int batches;
     std::cin >> batches;
     for (int i = 0; i < batches; i++) {
-        process_batch();
+        ProcessBatch();
     }
 }

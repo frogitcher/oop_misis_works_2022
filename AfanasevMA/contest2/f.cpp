@@ -4,7 +4,7 @@
 #include <set>
 
 
-void process_batch() {
+void ProcessBatch() {
     unsigned long int n_items;
     std::cin >> n_items;
     std::vector<long int> items;
@@ -29,6 +29,6 @@ int main() {
     int batches;
     std::cin >> batches;
     for (int i = 0; i < batches; i++) {
-        process_batch();
+        ProcessBatch();
     }
 }

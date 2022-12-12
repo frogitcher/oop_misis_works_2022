@@ -4,7 +4,7 @@
 #include <map>
 
 
-void process_batch() {
+void ProcessBatch() {
     int planet_count, cost_of_uber;
     std::cin >> planet_count >> cost_of_uber;
     std::map<int, int> orbitas;
@@ -24,6 +24,6 @@ int main() {
     int batches;
     std::cin >> batches;
     for (int i = 0; i < batches; i++) {
-        process_batch();
+        ProcessBatch();
     }
 }

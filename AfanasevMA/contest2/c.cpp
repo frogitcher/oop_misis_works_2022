@@ -6,7 +6,7 @@
 #include <set>
 
 
-void process_batch() {
+void ProcessBatch() {
     std::string path;
     std::cin >> path;
     std::set<std::array<int, 4>> visited_nodes{{0, 0}};
@@ -49,6 +49,6 @@ int main() {
     int batches;
     std::cin >> batches;
     for (int i = 0; i < batches; i++) {
-        process_batch();
+        ProcessBatch();
     }
 }

@@ -5,7 +5,7 @@
 #include <map>
 
 
-void process_batch() {
+void ProcessBatch() {
     long int station_count;
     long int query_count;
     std::cin >> station_count >> query_count;
@@ -39,6 +39,6 @@ int main() {
     int batches;
     std::cin >> batches;
     for (int i = 0; i < batches; i++) {
-        process_batch();
+        ProcessBatch();
     }
 }
