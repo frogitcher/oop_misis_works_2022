@@ -48,15 +48,19 @@ double CalculateAtan2(int n, double pi, double y, double x) {
 }
 
 
+const long int PI_SERIES_ELEMENTS = 1000000;
+const long int TAYLOR_SERIES_ELEMENTS = 1000000;
+
+
 int main() {
     std::ifstream cin("angle1.in");
     std::ofstream cout("angle1.out");
     cout.precision(10);  // вот бы ещё в условии до какого знака после запятой резать писалось...
-    double pi = CalculatePi(1000000);
+    double pi = CalculatePi(PI_SERIES_ELEMENTS);
     double x, y;
     cin >> x >> y;
 
-    double o = CalculateAtan2(1000000, pi, y, x);
+    double o = CalculateAtan2(TAYLOR_SERIES_ELEMENTS, pi, y, x);
     if (o < 0) {
         o += 2 * pi;
     }
