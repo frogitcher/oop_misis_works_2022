@@ -15,7 +15,7 @@ double CalculatePi(long int n) {
     return 4 * res;
 }
 
-double CalculateAtan(long int n, double x) {
+double CalculateAtanSeries(long int n, double x) {
     // see https://en.wikipedia.org/wiki/Taylor_series#Trigonometric_functions
     double res = 0;
     double num = x;
@@ -33,23 +33,25 @@ double CalculateAtan(long int n, double x) {
 }
 
 double CalculateAtan2(long int n, double pi, double y, double x) {
-    if (x == 0) {
-        return pi / 2;
+    if (x == 0 && y == 0) {
+        throw std::invalid_argument("what the hell are you doing");
+    }
+    else if (x == 0) {
+        return y > 0 ? pi / 2 : -pi / 2;
     }
     else {
-        double yx = y / x;
-        if (std::abs(yx) > 1) {
-            return pi / 2 - CalculateAtan(n, 1 / yx);
+        double atan = std::abs(x) > 1 ? (pi / 2 - CalculateAtanSeries(n, 1 / x)) : (CalculateAtanSeries(n, x));
+        if (x > 0) {
+            return atan;
         }
         else {
-            return CalculateAtan(n, yx);
+            return y >= 0 ? atan + pi : atan - pi;
         }
     }
 }
 
-
-const long int PI_SERIES_ELEMENTS = 1000000;
-const long int TAYLOR_SERIES_ELEMENTS = 1000000;
+const long int PI_SERIES_ELEMENTS = 10000000;
+const long int TAYLOR_SERIES_ELEMENTS = 10000000;
 
 
 int main() {
