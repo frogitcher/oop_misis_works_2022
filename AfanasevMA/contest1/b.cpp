@@ -1,26 +1,21 @@
 #include <iostream>
 #include <map>
 #include <vector>
-#include <set>
+#include <algorithm>
 
 
 int main() {
     long int n = 0;
     std::cin >> n;
-    std::vector<long int> v;
+    std::map<long int, long int> last_visited_i;
     for (long int i = 0; i < n; ++i) {
         long int t;
         std::cin >> t;
-        v.push_back(t);
+        last_visited_i[t] = i;
     }
-    std::set<long int> visited;
-    long int good = 0;
-    for(long int i = n - 1; i >= 0; --i) {
-        if (visited.count(v[i]) == 0) {
-            visited.emplace(v[i]);
-            good = v[i];
-        }
-    }
-    std::cout << good;
+    auto good = std::min_element(last_visited_i.begin(), last_visited_i.end(), [](auto &lhs, auto &rhs) {
+        return lhs.second < rhs.second;
+    });
+    std::cout << (good->first);
     return 0;
 }
