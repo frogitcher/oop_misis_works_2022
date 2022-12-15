@@ -13,7 +13,7 @@ int main() {
         needs.emplace(i);
     }
     for (int i = 0; i < str_len; i++) {
-        unsigned char ch = std::tolower(str[i]);
+        char ch = std::tolower(str[i]);
         needs.erase(ch);
     }
     std::cout << (needs.empty() ? "YES" : "NO");
