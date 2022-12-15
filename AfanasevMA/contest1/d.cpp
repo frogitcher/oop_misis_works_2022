@@ -23,7 +23,7 @@ int main() {
         if (i != -1) {
             sum -= holes[i];
         }
-        double spills = double(start) * a / double(sum);
+        double spills = double(start) * a / sum;
         if (spills >= b) {
             std::cout << i + 1;
             return 0;
