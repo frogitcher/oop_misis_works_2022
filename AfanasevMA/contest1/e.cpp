@@ -8,7 +8,8 @@ int main() {
     for (int i =0; i < n; i++) {
         std::string line;
         std::cin >> line;
-        if (line.length() == 3 && std::tolower(line[0]) == 'y' && std::tolower(line[1]) == 'e' && std::tolower(line[2]) == 's') {
+        std::transform(line.begin(), line.end(), line.begin(), ::tolower);
+        if (line == "yes") {
             std::cout << "YES" << std::endl;
         }
         else {
