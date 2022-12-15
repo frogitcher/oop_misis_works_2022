@@ -6,7 +6,7 @@
 double const PI = 3.1415926535897932384626;
 
 double F(double const x, double const a, double const b) {
-    return std::sqrt(b * b * (1 - x * x / (a * a)));
+    return std::sqrt(std::max(b * b * (1 - x * x / (a * a)), 0.0));
 }
 
 int main() {
