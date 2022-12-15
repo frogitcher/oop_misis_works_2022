@@ -10,9 +10,7 @@ int main() {
     long int out = 1;
     for (int i = 2; i <= n; i++) {
         std::cin >> a >> b >> c >> d;
-        if (a + b + c + d > sum) {
-            out++;
-        }
+        out += (a + b + c + d > sum);
     }
     std::cout << out;
     return 0;
