@@ -3,11 +3,9 @@
 
 int main() {
     long int n;
-    long long int k;
-    std::cin >> n >> k;
-    if (k >= n - 1) {
-        k = n - 1;
-    }
+    long long int k_inputs;
+    std::cin >> n >> k_inputs;
+    long int k = std::min(k_inputs, (long long int) n - 1);
 
     std::deque<std::pair<long int, long int>> players;
     std::vector<long int> wins;
