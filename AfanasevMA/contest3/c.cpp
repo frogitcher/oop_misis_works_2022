@@ -63,5 +63,4 @@ int main() {
         double volume = PartVolume(trapezia_volume, 10000000 / n, b, a, (b / n) * (i), (b / n) * (i + 1));
         std::cout << RoundTo(volume, 6) << std::endl;
     }
-
 }
