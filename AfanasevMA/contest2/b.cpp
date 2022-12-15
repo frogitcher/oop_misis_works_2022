@@ -4,6 +4,14 @@
 #include <map>
 #include <stdexcept>
 
+
+const std::map<int, int> N_WORDS_TO_SCORE = {
+        {1, 3},
+        {2, 1},
+        {3, 0}
+};
+
+
 void ProcessBatch() {
     int n_words_per_player;
     std::cin >> n_words_per_player;
@@ -22,19 +30,7 @@ void ProcessBatch() {
     for (int i_player = 0; i_player < 3; i_player++) {
         int score = 0;
         for (const std::string& word : player_words[i_player]) {
-            int cnt = word_count[word];
-            switch (cnt) {
-                case 1:
-                    score += 3;
-                    break;
-                case 2:
-                    score += 1;
-                    break;
-                case 3:
-                    break;
-                default:
-                    throw std::invalid_argument("wtf");
-            }
+            score += N_WORDS_TO_SCORE.at(word_count[word]);  // для константных мэпов operator[] не работает
         }
         std::cout << score << ' ';
     }
