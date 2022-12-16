@@ -1,3 +1,0 @@
-C:/Users/danik/oop_misis_works_2022/GorbushinDA/bin/CMakeFiles/main.dir
-C:/Users/danik/oop_misis_works_2022/GorbushinDA/bin/CMakeFiles/ALL_BUILD.dir
-C:/Users/danik/oop_misis_works_2022/GorbushinDA/bin/CMakeFiles/ZERO_CHECK.dir
