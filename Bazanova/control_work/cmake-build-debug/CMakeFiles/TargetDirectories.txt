@@ -1,0 +1,3 @@
+C:/Users/vital/Desktop/oop_misis_works_2022/Bazanova/control_work/cmake-build-debug/CMakeFiles/control_work.dir
+C:/Users/vital/Desktop/oop_misis_works_2022/Bazanova/control_work/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/vital/Desktop/oop_misis_works_2022/Bazanova/control_work/cmake-build-debug/CMakeFiles/rebuild_cache.dir
