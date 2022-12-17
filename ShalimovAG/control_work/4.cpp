@@ -6,6 +6,7 @@ double arg_test[14] = {0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, PI, 2 * PI * PI, 4.65,
 
 double mySin(double x) {
     int cnt = (int)(x / (2 * PI));
+    double prev_x = x;
     x -= cnt * 2 * PI;
     double res = 0;
     int one = 1;
@@ -20,7 +21,7 @@ double mySin(double x) {
         one *= -1;
     }
 
-    std::cout << "sin(" << x << ") = " << res << " ? " << sin(x) << std::endl;
+    std::cout << "sin(" << x << ") = " << res << " ? " << sin(prev_x) << std::endl;
     return res;
 }
 
