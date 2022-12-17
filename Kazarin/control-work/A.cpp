@@ -87,7 +87,6 @@ int main() {
 	Brick a(1, 2, 3, 4);
 	Brick b(3, 2, 1, 4);
 
-	std::cout << "Testing" << '\n';
 	std::cout << a.GetVolume() << ' ' << a.GetDensity() << '\n';
 
 	b.SetWidth(54);
@@ -101,6 +100,12 @@ int main() {
 
 	try {
 		a.SetWeight(-1);
+	} catch (IllegalBrickException ib) {
+		std::cout << "ooooops" << '\n';
+	}
+
+	try {
+		a.SetLength(-1);
 	} catch (IllegalBrickException ib) {
 		std::cout << "ooooops" << '\n';
 	}
