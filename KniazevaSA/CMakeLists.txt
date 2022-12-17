@@ -1,6 +1,4 @@
 cmake_minimum_required(VERSION 3.0)
-project(hello_world)
+project(table_tennis_task)
 
-add_executable(main
-	main.cpp
-)
+add_executable(queue queue.cpp)
