@@ -53,7 +53,11 @@ std::map<int, int> MapFather::GetMapUnion() {
         auto first = this->FirstGet(key);
         auto second = this->SecondGet(key);
         if (first && second) {
-            out[key] = std::max(first.value(), second.value());
+            if (std::abs(first.value()) > std::abs(second.value())) {
+                out[key] = first.value();
+            } else {
+                out[key] = second.value();
+            }
         } else if (first) {
             out[key] = first.value();
         } else if (second) {
@@ -78,6 +82,9 @@ int main() {
     std::cout << father.FirstIsSet(128) << std::endl;
     std::cout << father.SecondIsSet(11123) << std::endl;
     std::cout << father.SecondIsSet(128) << std::endl;
+
+    father.FirstSetTo(888, -123);
+    father.SecondSetTo(888, 4);
 
     auto uni = father.GetMapUnion();
     for (const auto& pair : uni) {
