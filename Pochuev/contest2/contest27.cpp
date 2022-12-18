@@ -26,7 +26,7 @@ int main(int argc, char** argv){
             std:: cin >> l >> r;
             if(paths[l] == std::make_pair(0,0))
                 std::cout << "NO\n";
-            else if(paths[r].first > paths[l].first or paths[r].second > paths[l].first)
+            else if(paths[r].first > paths[l].first || paths[r].second > paths[l].first)
                 std::cout << "YES\n";
             else
                 std::cout << "NO\n";
