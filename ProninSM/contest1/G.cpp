@@ -1,20 +1,21 @@
 #include <iostream>
 #include <vector>
-#include<set>
-#include<string>
-#include<algorithm>
-struct gen {
+#include <set>
+#include <string>
+#include <algorithm>
+struct Gen {
 	long long n;
 	char g;
 };
-bool cmp(gen x, gen y) {
+
+bool Comparator(Gen x, Gen y) {
 	return x.n > y.n;
 }
+
 int main() {
 	long long n;
 	std::cin >> n;
 	std::string s,ns;
-
 	std::cin >> s;
 	std::transform(s.begin(), s.end(), s.begin(), towlower);
 	std::vector <int> A(26);
@@ -31,6 +32,4 @@ int main() {
 	else {
 		std::cout << "NO";
 	}
-
 }
-/* Sat Nov 12 2022 01:26:25 GMT+0300 (Moscow Standard Time) */

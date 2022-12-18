@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
-#include<set>
-#include<string>
-#include<algorithm>
+#include <set>
+#include <string>
+#include <algorithm>
 
 int main() {
 	long long t;
@@ -18,6 +18,4 @@ int main() {
 			std::cout << "NO"<<std::endl;
 		}
 	}
-	
 }
-/* Fri Nov 11 2022 23:47:04 GMT+0300 (Moscow Standard Time) */

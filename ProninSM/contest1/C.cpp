@@ -3,33 +3,28 @@
 #include<set>
 #include<string>
 #include<algorithm>
-struct st {
-	int s;
+
+struct Struction {
+	int sum;
 	int i;
 };
-bool cmp(st x, st y) {
-	if (x.s > y.s) {
-		return true;
-	}
-	else if (x.s == y.s) {
-		return x.i < y.i;
-	}
-	else {
-		return false;
-	}
+
+bool Comparator(Struction x, Struction y) {
+	return x.sum != y.sum ? x.sum > y.sum:x.i < y.i;
 }
+
 int main() {
-	int i, m,n;
+	int n;
 	std::cin >> n;
-	std::vector <st> A(n);
+	std::vector <Struction> A(n);
 	std::vector <int> B(n);
 	for (int i = 0; i < n; ++i) {
 		int x1, x2, x3, x4;
 		std::cin >> x1 >> x2 >> x3 >> x4;
-		A[i].s=x1+x2+x3+x4;
+		A[i].sum=x1+x2+x3+x4;
 		A[i].i=i;
 	}
-	sort(A.begin(), A.end(), cmp);
+	sort(A.begin(), A.end(), Comparator);
 	for (int i = 0; i < n; ++i) {
 		if (A[i].i == 0) {
 			std::cout << i + 1;
@@ -37,4 +32,3 @@ int main() {
 		}
 	}
 }
-/* Fri Nov 11 2022 20:42:12 GMT+0300 (Moscow Standard Time) */

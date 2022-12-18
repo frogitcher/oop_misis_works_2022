@@ -1,33 +1,27 @@
 #include <iostream>
 #include <vector>
-#include<set>
-#include<string>
-#include<algorithm>
-struct st {
+#include <set>
+#include <string>
+#include <algorithm>
+struct Struction {
 	int n;
 	int i;
 };
-bool cmp(st x, st y) {
-	if (x.n < y.n) {
-		return true;
-	}
-	else if (x.n == y.n) {
-		return x.i > y.i;
-	}
-	else {
-		return false;
-	}
+
+bool Comparator(Struction x, Struction y) {
+	return x.n != y.n ? x.n<y.n : x.i>y.i;
 }
+
 int main() {
 	int i, m,n;
 	std::cin >> n;
-	std::vector <st> A(n);
+	std::vector <Struction> A(n);
 	std::vector <int> B(n);
 	for (int i = 0; i < n; ++i) {
 		std::cin >> A[i].n;
 		A[i].i=i;
 	}
-	sort(A.begin(), A.end(), cmp);
+	sort(A.begin(), A.end(), Comparator);
 	int ans = A[0].n;
 	m = A[0].i;
 	for (int i = 1; i < n; ++i) {
@@ -40,4 +34,3 @@ int main() {
 	}
 	std::cout << ans;
 }
-/* Fri Nov 11 2022 20:31:17 GMT+0300 (Moscow Standard Time) */

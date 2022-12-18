@@ -1,21 +1,24 @@
 #include <iostream>
 #include <vector>
-#include<set>
-#include<string>
-#include<algorithm>
-struct gen {
+#include <set>
+#include <string>
+#include <algorithm>
+
+struct Gen {
 	long long n;
 	char g;
 };
-bool cmp(gen x, gen y) {
+
+bool Comparator(Gen x, Gen y) {
 	return x.n > y.n;
 }
+
 int main() {
 	std::vector <long long> A(5);
 	for (int i = 0; i < 5; ++i) {
 		A[i] = 0;
 	}
-	std::vector <long long> IND;
+	std::vector <long long> Ind;
 	std::string s;
 	long long n;
 	std::cin >> n>>s;	
@@ -34,10 +37,10 @@ int main() {
 		}
 		else {
 			A[4] += 1;
-			IND.push_back(i);
+			Ind.push_back(i);
 		}
 	}
-	std::vector <gen> Q(4);
+	std::vector <Gen> Q(4);
 	Q[0].g = 'A';
 	Q[1].g = 'C';
 	Q[2].g = 'G';
@@ -47,7 +50,7 @@ int main() {
 	Q[1].n = A[1];
 	Q[2].n = A[2];
 	Q[3].n = A[3];
-	sort(Q.begin(), Q.end(), cmp);
+	sort(Q.begin(), Q.end(), Comparator);
 
 	long long need;
 	need = Q[0].n;
@@ -74,8 +77,4 @@ int main() {
 			}
 		}
 	}
-
-
-
 }
-/* Sat Nov 12 2022 00:40:02 GMT+0300 (Moscow Standard Time) */

@@ -1,15 +1,18 @@
 #include <iostream>
 #include <vector>
-#include<set>
-#include<string>
-#include<algorithm>
-struct gen {
+#include <set>
+#include <string>
+#include <algorithm>
+
+struct Gen {
 	long long n;
 	char g;
 };
-bool cmp(gen x, gen y) {
+
+bool Comparator(Gen x, Gen y) {
 	return x.n > y.n;
 }
+
 int main() {
 	std::vector <long long> A(10);
 	long long n;
@@ -34,14 +37,12 @@ int main() {
 			}
 		}
 		else {
-			int w = (int)s[i]-48;
+			int sdv=48;
+			int w = (int)s[i]-sdv;
 			A[w] = 0;
 		}
 	}
 	for (int i = 0; i < 10; ++i) {
 		std::cout << A[i];		
 	}
-
-
 }
-/* Sat Nov 12 2022 08:47:50 GMT+0300 (Moscow Standard Time) */

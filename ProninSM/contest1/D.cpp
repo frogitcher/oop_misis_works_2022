@@ -1,24 +1,22 @@
 #include <iostream>
 #include <vector>
-#include<set>
-#include<string>
-#include<algorithm>
-struct st {
+#include <set>
+#include <string>
+#include <algorithm>
+
+struct Struction {
 	int r;
 	int i;
 };
-bool cmp(st x, st y) {
-	if (x.r > y.r) {
-		return true;
-	}
-	else {
-		return false;
-	}
+
+bool Comparator(Struction x, Struction y) {
+	return x.r > y.r;
 }
+
 int main() {
 	long long n, A, B;
 	std::cin >> n >> A >> B;
-	std::vector <st> S(n-1);
+	std::vector <Struction> S(n-1);
 	long long s=0;
 	long long po;
 	std::cin >> po;
@@ -28,9 +26,10 @@ int main() {
 		s += S[i].r;
 	}
 	s += po;
-	long long w = po * A,as,ans=0;
-	as = s;
-	sort(S.begin(), S.end(),cmp);
+	long long w = po * A;
+	long long ans = 0;
+	long long as = s;
+	sort(S.begin(), S.end(),Comparator);
 	long long i = 0;
 	while (w < as * B) {
 		ans += 1;
@@ -39,4 +38,3 @@ int main() {
 	}
 	std::cout << ans;
 }
-/* Fri Nov 11 2022 21:29:54 GMT+0300 (Moscow Standard Time) */

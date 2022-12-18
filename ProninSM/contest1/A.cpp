@@ -1,10 +1,11 @@
 #include <iostream>
 #include <vector>
-#include<set>
-#include<string>
-#include<algorithm>
+#include <set>
+#include <string>
+#include <algorithm>
+
 int main() {
-	int i, m,n;
+	int i, m, n;
 	std::cin >> n;
 	std::vector <int> A(n);
 	for (int i = 0; i < n; ++i) {
@@ -19,4 +20,3 @@ int main() {
 	}
 	std::cout << ans;
 }
-/* Thu Nov 03 2022 17:37:23 GMT+0300 (Moscow Standard Time) */
