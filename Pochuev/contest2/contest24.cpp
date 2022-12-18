@@ -2,12 +2,12 @@
 #include<set>
 #include<vector>
 
-int main(int argc, char**argv){
+int main(){
     int n;
     std::cin >> n;
 
     int reqElem = n;
-    std::set<int>queue;
+    std::set<int>que;
 
     for(int _ = 0; _ < n; ++_){
         int temp;
@@ -15,11 +15,11 @@ int main(int argc, char**argv){
         if(temp == reqElem){
             std::cout << reqElem << ' ';
             reqElem -= 1;
-            if(queue.size() != 0) {//std::cout << "here";
-                while (queue.size() != 0 and *(--(queue.end())) == reqElem) {
+            if(queue.size() != 0) {
+                while (que.size() != 0 and *(--(que.rbegin())) == reqElem) {
                     std::cout << reqElem << ' ';
                     reqElem--;
-                    queue.erase(--(queue.end()));
+                    que.erase(--(que.rbegin()));
                 }
                 std::cout << '\n';
             }
@@ -28,7 +28,7 @@ int main(int argc, char**argv){
             }
         }else{
             std:: cout << "\n";
-            queue.insert(temp);
+            que.insert(temp);
         }
     }
     return 0;
