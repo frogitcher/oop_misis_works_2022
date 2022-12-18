@@ -4,10 +4,7 @@
 #include "Header.h"
 #include "../doctest.h"
 
-using namespace std;
-
-
 TEST_CASE("testing") {
-    CHECK(HelloWorld() == "Hello, World!");
-    CHECK_FALSE(HelloWorld() == "Hello, World");
+	CHECK(HelloWorld() == "HelloWorld!");
+	CHECK_FALSE(HelloWorld() == "HeloWorld");
 }
