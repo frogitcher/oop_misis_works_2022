@@ -1,12 +1,11 @@
 #include<iostream>
 #include<vector>
 
-int main(int argc,char** argv){
+int main(){
     long long n, k;
     std:: cin >> n >> k;
     
     std::vector<int> vec(n);
-    std::vector<int> queue(n);
     
     for(long int i = 0; i < n; ++i){
         std::cin >> vec[i];   
@@ -15,9 +14,9 @@ int main(int argc,char** argv){
     long long indWinner = 0,count = 0,indOppon = 1;
     
     while(count < k){
-        if(indOppon > n*3)
+        if(indOppon > n*3){
             break;    
-        
+        }
         if(vec[indWinner % n] > vec[indOppon % n]){
             int temp = vec[indWinner%n];
             vec[indWinner % n] = vec[indOppon % n];
