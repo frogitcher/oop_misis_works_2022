@@ -2,7 +2,7 @@
 #include<vector>
 #include<cmath>
 
-int main(int argc, char**argv){
+int main(){
     int n;
     double s = 0,sa = 0;
     std::vector<std::vector<double>> attacks;
