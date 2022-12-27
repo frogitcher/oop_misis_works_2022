@@ -3,7 +3,6 @@
 #include<vector>
 #include<iomanip>
 
-//const double Pi = std::atan(1) * 4;
 const double Pi = 3.14159265358979;
 
 double Radius(double x, double a, double b) {
