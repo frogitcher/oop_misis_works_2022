@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.0)
+project(RationalNumbers)
+
+add_executable(main
+	main2.cpp
+	Rational.cpp
+	Rational.h
+)
