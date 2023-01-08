@@ -1,0 +1,19 @@
+10
+i1 2
+i1 3
+i1 3
+i2 3
+i2 3
+e2 4
+e1 4
+inter
+inter
+i1 2
+e1 2
+
+5
+i1 2
+e2 2
+i1 2
+i2 2
+inter
